@@ -1,31 +1,34 @@
-
-importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
-
-importScripts(
-    "/precache-manifest.d5ce2e46fe7705c8da78da194d247fb9.js"
-);
-
-self.addEventListener('message', (event) => {
-    if (event.data && event.data.type === 'SKIP_WAITING') {
-        self.skipWaiting();
-    }
+const version = "0.6.18";
+const cacheName = `Decor&More-${version}`;
+self.addEventListener('install', e => {
+    e.waitUntil(
+        caches.open(cacheName).then(cache => {
+            return cache.addAll([
+                `/`,
+                `/index.html`,
+                `/src/styles.css`,
+                `/HomeImages/slideshow.jpg`,
+                `/HomeImages/slideshow1.png`,
+                `/HomeImages/slideshow2.jpg`
+            ])
+                .then(() => self.skipWaiting());
+        })
+    );
 });
 
-workbox.core.clientsClaim();
-
-/**
- * The workboxSW.precacheAndRoute() method efficiently caches and responds to
- * requests for URLs in the manifest.
- * See https://goo.gl/S9QRab
- */
-self.__precacheManifest = [].concat(self.__precacheManifest || []);
-workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
-
-workbox.routing.registerNavigationRoute(workbox.precaching.getCacheKeyForURL("/index.html"), {
-
-    blacklist: [/^\/_/, /\/[^\/]+\.[^\/]+$/],
+self.addEventListener('activate', event => {
+    event.waitUntil(self.clients.claim());
 });
-Collapse
+
+self.addEventListener('fetch', event => {
+    event.respondWith(
+        caches.open(cacheName)
+            .then(cache => cache.match(event.request, { ignoreSearch: true }))
+            .then(response => {
+                return response || fetch(event.request);
+            })
+    );
+});
 
 
 
