@@ -4,9 +4,9 @@ import '../styles.css';
 const Home = (props) => {
 	return (
 		<>
-			<img src="../HomeImages/slideshow2.jpg"></img>
+			<img alt="homeimg" src="../HomeImages/slideshow2.jpg"></img>
 
-			<div class="about">
+			<div className="about">
 				<h2>About Us</h2>
 			</div>
 

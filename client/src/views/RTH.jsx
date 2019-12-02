@@ -1,5 +1,4 @@
 import React from 'react'
-import vipImage from '../vip.png'
 import Furniture from "./Furniture";
 
 export default class Products extends React.Component {

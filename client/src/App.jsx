@@ -8,7 +8,7 @@ import LogOut from './views/LogOut'
 import SignUp from './views/SignUp'
 import RTH from './views/RTH'
 import Home from './views/Home'
-import Furniture from './views/Furniture'
+// import Furniture from './views/Furniture'
 
 class App extends React.Component {
 	state = { currentUser: httpClient.getCurrentUser() }

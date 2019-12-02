@@ -9,7 +9,7 @@ function Furniture(props) {
     return (
         <>
 
-            <img src={props.img} />
+            <img alt="productimg" src={props.img} />
             <p>{props.price}</p>
             <p>{props.name}</p>
             <p>{props.description}</p>

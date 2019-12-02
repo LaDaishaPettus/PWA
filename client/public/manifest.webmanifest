@@ -1,0 +1,15 @@
+{
+    "name": "Decor&More App",
+    "short_name": "Decor App",
+    "icons": [
+        {
+            "src": "assets/images/icons/decor&more.png",
+            "sizes": "16x16",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#ffffff",
+    "background_color": "#ffffff",
+    "start_url": "/",
+    "display": "standalone"
+}
