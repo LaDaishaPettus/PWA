@@ -11,6 +11,7 @@ const ATLAS_URI = process.env.ATLAS_URI || 'mongodb://localhost/auth'
 const PORT = process.env.PORT || 3001
 
 mongoose.set('useCreateIndex', true)
+
 mongoose.connect(ATLAS_URI, { useNewUrlParser: true }, (err) => {
 	console.log(err || `Connected to MongoDB.`)
 })

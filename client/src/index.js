@@ -4,6 +4,7 @@ import { BrowserRouter as Router } from 'react-router-dom'
 import 'milligram'
 import './styles.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import * as serviceWorker from "./serviceWorker";
 
 
 import App from './App'
@@ -13,3 +14,4 @@ ReactDOM.render(
 	document.getElementById('root')
 )
 
+serviceWorker.register();
