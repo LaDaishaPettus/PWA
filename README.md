@@ -18,7 +18,22 @@ The task was to build a UI for my products page while connecting it to my own Mo
    2. Click the share button
    3. Click "add to homescreen"
    4. Confirm
-   
+
+## App showing on Homescreen
+
+![](/Audit/App.jpg)
+![](/Audit/Home.png)
+![](/Audit/Login.png)
+
+
+## Lighthouse Tests
+
+   Before PWA
+![](/Audit/Pre-Audit.png)
+
+   After PWA
+![](/Audit/Post-Audit.png)
+
 
 ## Languages & Tools
 - __React is used for the UI__
