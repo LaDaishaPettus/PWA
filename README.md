@@ -2,8 +2,7 @@
 
 ### Overview
 
-The task was to build a UI for my products page while connecting it to my own MongoDB Atlas Database. Only allowing the admin to login and see the products to manipulate them if needed. This task was built and launched on Heroku by
-The React client app could easily be restructured to keep current user information in a Redux Store. Give it a shot!
+The task was to build a UI for my products page while connecting it to my own MongoDB Atlas Database. Only allowing the admin to login and see the products to manipulate them if needed. Created a PWA to allow anyone to add this to their home screen on their phone! This task was built and launched on Heroku. Give it a shot! https://pwapp1.herokuapp.com/
 
 ### Prerequisites & Installation!
 
@@ -14,7 +13,12 @@ The React client app could easily be restructured to keep current user informati
    5. create .env with your own local mongoDB
    6. npm run start
 
-
+### Add my App to your device!
+   1. Click this link https://pwapp1.herokuapp.com/
+   2. Click the share button
+   3. Click "add to homescreen"
+   4. Confirm
+   
 
 ## Languages & Tools
 - __React is used for the UI__
