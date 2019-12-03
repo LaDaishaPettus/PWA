@@ -1,4 +1,4 @@
-# React Application with JWT Authentication
+# Progressive Web Application
 
 ### Overview
 
